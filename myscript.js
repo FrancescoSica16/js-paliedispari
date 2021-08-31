@@ -1,28 +1,67 @@
-const parola = prompt("dammi una parola");
+// const parola = prompt("dammi una parola");
 
-let reverseParola = "" ;
+// let reverseParola = "" ;
 
-let verifica = isPalindroma(parola , reverseParola);
+// let verifica = isPalindroma(parola , reverseParola);
 
-console.log(verifica);
+// console.log(verifica);
 
-function isPalindroma(x , y) {
+// function isPalindroma(x , y) {
 
     
-    for (let i = x.length; i >= 0 ; i--) {
+//     for (let i = x.length -1 ; i >= 0 ; i--) {
         
-        return y += x.charAt(i);        
-    }
+//      y += x.charAt(i);  
+     
+//     }
           
-    if (x == y) {
-        return ("la parola è palindroma");
-    }
-    else {
-        return ("la parola NON è palindroma");
-    }
+//     if (x == y) {
+//         return ("la parola è palindroma");
+//     }
+//     else {
+//         return ("la parola NON è palindroma");
+//     }
+// }
+
+// PARI O DISPARI
+
+let somma = 0 ;
+
+let pariODispari = prompt("scegli se pari o dispari").toUpperCase;
+
+
+if ((pariODispari == "PARI" || pariODispari == "DISPARI")) {
+    alert("NON FARE IL FURBO");
+} 
+
+let numeroScelto = parseInt(prompt("adesso scegli un numero da 1 a 5"));
+
+let numPc = numRandom (1 , 5);
+
+console.log(numPc)
+
+if (!(numeroScelto >= 1 && numeroScelto <= 5)) {
+    
+    alert("non hai inserito un numero tra 1 e 5");
+
+} else{
+    somma += numeroScelto + numPc;
+} 
+
+console.log(somma);
+
+
+function isEven(value) {
+    if (value%2 == 0) {
+        return true;
+    } else 
+        return false;
 }
 
-
+function numRandom (min,max) {
+   let x = Math.floor(Math.random() * (max - min) + min);
+   return x;
+}
 
 
 
@@ -40,20 +79,3 @@ function isPalindroma(x , y) {
 // else {
 //     console.log("la parola NON è palindroma");
 // }
-
-
-
-
-
-
-
-// var parola=prompt("Inserire una parola: "), prova="";
-// for (l=parola.length-1; l>=0; l--)
-// {
-// document.write(parola.charAt(l)); //Stampo le lettere invertite al fine di vedere se è giusto il procedimento
-// prova+=parola.charAt(l);
-// }
-// if(parola == prova)
-// document.write("La parola e' palindroma </br>");
-// else
-// document.write("La parola non e' palindroma </br>");
